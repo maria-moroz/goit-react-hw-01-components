@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import defaultAvatar from './default.png';
+import defaultAvatar from '../default.png';
 
 export default function Profile(props) {
   const { userName, tag, location, avatar = defaultAvatar, stats } = props;

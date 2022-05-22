@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
+import defaultAvatar from '../default.png';
 import s from './FriendListItem.module.css';
 
 export default function FriendListItem({ friend }) {
-  const { avatar, name, isOnline } = friend;
+  const { avatar = defaultAvatar, name, isOnline } = friend;
   return (
     <Fragment>
       <li className={s.item}>
