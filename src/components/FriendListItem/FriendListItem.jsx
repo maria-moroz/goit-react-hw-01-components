@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
-import defaultAvatar from '../default.png';
+import defaultAvatar from '../../images/default.png';
 import s from './FriendListItem.module.css';
 
 export default function FriendListItem({ friend }) {

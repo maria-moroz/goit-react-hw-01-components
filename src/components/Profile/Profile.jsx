@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import defaultAvatar from '../default.png';
+import defaultAvatar from '../../images/default.png';
 
 export default function Profile(props) {
   const { userName, tag, location, avatar = defaultAvatar, stats } = props;
+  const { followers, views, likes } = stats;
 
   return (
     <div className={s.card}>
@@ -17,15 +18,15 @@ export default function Profile(props) {
       <ul className={s.stats}>
         <li>
           <span className={s.label}>Followers</span>
-          <span className={s.quantity}>{stats.followers}</span>
+          <span className={s.quantity}>{followers}</span>
         </li>
         <li>
           <span className={s.label}>Views</span>
-          <span className={s.quantity}>{stats.views}</span>
+          <span className={s.quantity}>{views}</span>
         </li>
         <li>
           <span className={s.label}>Likes</span>
-          <span className={s.quantity}>{stats.likes}</span>
+          <span className={s.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
